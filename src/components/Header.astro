@@ -4,15 +4,26 @@ import IconButton from "./common/IconButton";
 import ReactLoaded from "./common/ReactLoaded";
 import ThemeSwitch from "./ThemeSwitch";
 import { ClientRouter } from "astro:transitions";
-
+import IconKeyboard from "@/icons/IconKeyboard";
 ---
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap"
+    rel="stylesheet"
+/>
 
 <ReactLoaded client:only />
 <div class="header-container">
-    <h1>Ninja type</h1>
-
+    <div id="logo">
+        <a href="/">
+            <h1 id="logo-text" class="skranji-bold">Ninja Type</h1>
+        </a>
+        <a class="icon-button" href="/">
+            <i class="material-icons"> keyboard </i>
+        </a>
+    </div>
     <div class="header-buttons">
-        <ThemeSwitch client:load />
+        <!-- <ThemeSwitch client:load /> -->
         <!-- <IconButton>
         <i class="material-icons">keyboard</i>
     </IconButton> -->

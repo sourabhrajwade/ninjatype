@@ -8,7 +8,7 @@ const ThemeSwitch = () => {
     const { theme } = useStore($config);
     
     useEffect(() => {
-        document.querySelector("#currentTheme")?.setAttribute("href", THEME[theme] ?? "/themes/default.css");
+        document.querySelector("#currentTheme")?.setAttribute("href", THEME[theme].path ?? "/themes/default.css");
     }, [theme]);
 
     const handleThemeChange = (newTheme: keyof typeof THEME) => {

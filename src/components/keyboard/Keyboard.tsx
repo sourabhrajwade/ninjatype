@@ -33,8 +33,7 @@ const Keyboard = () => {
 
     const isComplete = false
     return (<div id="keyboard-wrapper">
-        <input value="" onChange={()=>{
-            console.log("hidden input clicked");
+        <input value="" onChange={() => {
         }} ref={keyboardInputRef} type="text" id="kb-hidden-input" autoComplete="off" spellCheck="false" />
 
         {<div id="keyboard-overlay" data-kb-focused={isFocused ? 1 : 0}>

@@ -18,14 +18,44 @@ a {
     text-decoration: none;
 }
 h1 {
-    margin: 0;
+    color: var(--main-color);
+    opacity: 0.8;
+}
+ h2, h3, h4, h5, h6 {
+    color: var(--sub-text-color);
+    opacity: 0.8;
+}
+p {
+    color: var(--text-color)
 }
 iconify-icon {
     width: var(--icon-size);
     height: var(--icon-size);
 }
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#logo i {
+    font-size: 32px;
+    opacity: 0.8;
+}
+#logo-text {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    color: var(--main-color);
+    opacity: 0.8;
+}
+
 #main-container {
     margin-top: 0px;
+}
+
+#main-md-container {
+    padding: 0px 40px;
+    margin-top: 40px;
 }
 
 #logo {
@@ -46,6 +76,19 @@ iconify-icon {
     position: relative;
     height: calc(var(--num-lines)*var(--line-height));
 }
+
+.skranji-regular {
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.skranji-bold {
+  font-family: "Skranji", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 #kb-hidden-input {
     position: absolute;
@@ -1049,4 +1092,42 @@ body[data-kb-typing-state="1"][data-kb-state="2"] footer {
     .footer-content {
         padding: 0 20px;
     }
+}
+
+#theme-settings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.large-btn {
+    flex-basis: 230px;
+    font-size: 18px;
+    padding: 8px 12px;
+    border: 4px solid var(--sub-alt-text-color);
+    border-radius: var(--border-radius);
+    position: relative;
+    box-sizing: border-box;
+    margin: 4px;
+    height: 40px;
+}
+
+#theme-settings .large-btn:hover {
+    border: 4px solid  var(--lg-btn-main-color);
+    background-color: var(--lg-btn-bg-color);
+    color: var(--lg-btn-text-color);
+}
+
+#theme-settings .large-btn[data-is-selected="1"] {
+    border: 4px solid var(--main-color);
+    color: var(--main-color);
+}
+#theme-settings .large-btn[data-is-selected="1"]::after {
+    content: "✓";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 16px;
+    color: var(--main-color);
 }
