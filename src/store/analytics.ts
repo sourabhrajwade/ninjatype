@@ -6,7 +6,6 @@ import { $config } from "./config";
 
 export const $typingTrace = atom<{ char: string; time: number }[]>([]); // [typedChar, timestampMillis, isCorrect]
 
-
 export const $rawCPM = computed($typingTrace, (trace) => {
     // characters per minute
     // exclude the artificial end marker added on completion
