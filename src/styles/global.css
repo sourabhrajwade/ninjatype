@@ -252,7 +252,7 @@ iconify-icon {
 .pipe {
     background-color: var(--pipe-color);
     position: absolute;
-    transform: translateX(-50%) translateY(25%);
+    transform: translateX(-50%) translateY(30%);
     transform-origin: center;
     font-weight: lighter;
     width: 3px;
