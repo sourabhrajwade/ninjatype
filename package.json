@@ -19,6 +19,7 @@
     "@fontsource/twinkle-star": "^5.2.8",
     "@iconify/react": "^6.0.2",
     "@nanostores/persistent": "^1.2.0",
+    "@nanostores/query": "^0.3.4",
     "@nanostores/react": "^1.0.0",
     "@nivo/core": "^0.99.0",
     "@nivo/line": "^0.99.0",

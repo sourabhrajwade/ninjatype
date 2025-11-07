@@ -1,5 +1,5 @@
-import { words1k } from "@/constants/words";
-import { atom, computed, effect, onMount, onSet } from "nanostores";
+import { words1k } from "@/constants/words1k";
+import { atom, computed, effect } from "nanostores";
 import { $config } from "./config";
 import { createSentenceFromWords, genOneWord } from "@/util/sentence";
 import { KBSTATE, KBTYPINGSTATE } from "@/constants/keyboardState";
