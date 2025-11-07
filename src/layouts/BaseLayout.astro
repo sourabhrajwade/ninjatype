@@ -2,6 +2,7 @@
 import SEO from "@/components/seo/SEO.astro";
 import CommonSettings from "@/components/CommonSettings.astro";
 import "@/styles/global.css";
+import CommonHead from "@/components/toolbar/CommonHead.astro";
 
 export interface Props {
   title?: string;
@@ -24,23 +25,7 @@ const seoProps = Astro.props;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />
-    
-    <!-- Preconnect to external domains for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    
-    
-    <!-- Theme -->
-    <link rel="stylesheet" as="style" id="currentTheme" href="/themes/default.css" />
-    
+    <CommonHead />
     <!-- SEO Component -->
     <SEO {...seoProps} />
     
