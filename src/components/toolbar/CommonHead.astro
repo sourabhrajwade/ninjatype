@@ -17,3 +17,28 @@
 
 <!-- Theme -->
 <link rel="stylesheet" as="style" id="currentTheme" href="/themes/default.css" />
+
+
+
+<!-- Theme Switcher -->
+<!-- <script>
+    import { THEME } from "@/constants/themes";
+
+    // Immediately invoked function to set theme before page load
+    (function() {
+        try {
+            const theme  = (localStorage.getItem("config:theme") || "default") as keyof typeof THEME;
+            document.querySelector("#currentTheme")?.setAttribute("href", THEME[theme].path ?? THEME["default"].path);
+        } catch (e) {
+            console.error("Error setting theme:", e);
+        }
+    })();
+</script> -->
+<script>
+    import { $config } from "@/store/config";
+    import { THEME } from "@/constants/themes";
+
+    $config.subscribe((config) => {
+        document.querySelector("#currentTheme")?.setAttribute("href", THEME[config.theme].path ?? THEME["default"].path);
+    });
+</script>
