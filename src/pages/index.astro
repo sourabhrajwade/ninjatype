@@ -22,7 +22,8 @@ import AnalyticsContainer from "@/components/analytics/AnalyticsContainer.astro"
     <AnalyticsContainer />
     
     <Footer />
-</BaseLayout><script>
+</BaseLayout>
+    <script>
         import { $kbState, $kbTypingState } from "@/store/keyboard";
 
         $kbState.subscribe((state) => {

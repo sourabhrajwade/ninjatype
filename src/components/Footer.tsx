@@ -12,10 +12,10 @@ const Footer = () => {
                 </div>
                 
                 <div className="footer-center">
-                    <a href="/about">about</a>
-                    <a href="/contact">contact</a>
-                    <a href="/support">support</a>
-                    <a href="/contributors">contributors</a>
+                    <a href="/about/" data-astro-prefetch="load">about</a>
+                    <a href="/contact/" data-astro-prefetch="load">contact</a>
+                    <a href="/support/" data-astro-prefetch="load">support</a>
+                    <a href="/contributors/" data-astro-prefetch="load">contributors</a>
                 </div>
                 
                 <div className="footer-right">

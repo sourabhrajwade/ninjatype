@@ -4,6 +4,7 @@ export interface Props {
   description?: string;
   canonical?: string;
   image?: string;
+  logo?: string;
   imageAlt?: string;
   type?: "website" | "article";
   author?: string;
@@ -16,7 +17,8 @@ const {
   title = "NinjaType - Minimalist Typing Practice",
   description = "Improve your typing speed and accuracy with NinjaType. A minimalist, distraction-free typing interface with real-time WPM tracking, performance analytics, and customizable themes.",
   canonical = Astro.url.href,
-  image = new URL("/images/og-image.png", Astro.site || Astro.url).href,
+  image = "/images/og-image.png",
+  logo = "/favicon/favicon-192x192.png",
   imageAlt = "NinjaType - Minimalist Typing Interface",
   type = "website",
   author = "NinjaType",
@@ -65,6 +67,10 @@ const robotsContent = [
 <meta name="theme-color" content="#FFFFFF" />
 <meta name="msapplication-TileColor" content="#FFFFFF" />
 <meta name="msapplication-TileImage" content="/favicon-512x512.png" />
+
+
+<!-- og logo -->
+<meta property="og:logo" content={logo} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={type} />
