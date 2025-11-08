@@ -1,11 +1,11 @@
-import { $config } from "@/store/config";
+import { $config, defaultConfig } from "@/store/config";
 import { useStore } from "@nanostores/react";
 
 const ResetButton = () => {
-    const config = useStore($config);
     const handleReset = () => {
-        $config.set({...config});
+        $config.set({...defaultConfig});
     };
+    
     return (
         <div id="reset-button">
             <button className="btn" onClick={handleReset} title="Reset Configuration">
