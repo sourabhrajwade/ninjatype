@@ -1,5 +1,5 @@
 export const THEME = {
-    default: {
+    monokai: {
         path: "/themes/default.css",
         label: "Monokai",
         colors: {
@@ -17,7 +17,7 @@ export const THEME = {
             main: "#e0e0e0"
         }
     },
-    monokai: {
+    monokaiClassic: {
         path: "/themes/monokai.css",
         label: "Monokai Classic",
         colors: {

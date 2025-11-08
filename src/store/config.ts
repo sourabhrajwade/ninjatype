@@ -8,7 +8,7 @@ export const $config = persistentMap<{
     maxWordCount: string;
     countdownTime: string;
 }>("config:", {
-    theme: "default",
+    theme: "amoled",
     mode : "time", // default is time
     maxWordCount: "25",
     countdownTime: "15s",
