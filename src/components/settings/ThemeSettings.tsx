@@ -1,7 +1,6 @@
 import { THEME } from "@/constants/themes";
 import { $config } from "@/store/config";
 import { useStore } from "@nanostores/react";
-import { prefetch } from "astro:prefetch";
 import { useEffect, useState } from "react";
 
 
@@ -11,10 +10,10 @@ const ThemeSettings = () => {
 
     useEffect(() => {
         setTheme(storedTheme);
-        // prefetch all the theme css files
-        Object.values(THEME).forEach((thm) => {
-            prefetch(thm.path);
-        });
+        // // prefetch all the theme css files
+        // Object.values(THEME).forEach((thm) => {
+        //     prefetch(thm.path);
+        // });
         
     }, [storedTheme]);
 
