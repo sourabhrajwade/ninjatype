@@ -369,6 +369,11 @@ iconify-icon {
     
 }
 
+#word-settings {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .loader {
     display: none;
     justify-content: center;
@@ -444,7 +449,7 @@ body[data-kb-state="2"]  .loader svg {
     color: var(--sub-text-color);
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     font-size: var(--font-size);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -1205,7 +1210,7 @@ body[data-kb-typing-state="1"][data-kb-state="2"] footer {
 }
 
 
-#theme-settings .large-btn[data-is-selected="1"]::after {
+.large-btn[data-is-selected="1"]::after {
     content: "✓";
     position: absolute;
     top: 8px;
@@ -1239,6 +1244,13 @@ body[data-kb-typing-state="2"] #main-container {
 
 .bagel-fat-one-regular {
   font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nunito-regular-400 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }

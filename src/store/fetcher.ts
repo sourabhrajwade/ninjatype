@@ -15,8 +15,14 @@ export const [createFetcherStore, createMutatorStore] = nanoquery({
 });
 
 export type FetchWordListType = {
-    words: string[];
-    type: "wordlist" | "quotelist";
     description: string;
     length: number;
+} & (
+    | { type: "wordlist"; words: string[] }
+    | { type: "quotelist"; quotes: QuoteType[] }
+);
+
+export type QuoteType = {
+    quote: string;
+    author: string;
 };

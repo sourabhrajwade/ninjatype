@@ -3,10 +3,25 @@ title: "Settings"
 ---
 import ThemeSettings from "@/components/settings/ThemeSettings";
 import ResetSettingsBtn from "@/components/settings/ResetSettingsBtn";
+import WordSettings from "@/components/settings/WordSettings";
+import QuoteSettings from "@/components/settings/QuoteSettings";
 
 # <i class="material-icons">settings</i> Settings
 
 You can customize various aspects of your typing experience in NinjaType through the settings menu. Access the settings by clicking on the gear icon located at the top-right corner of the main interface.
+
+## Sentence Settings
+
+To customize the word list used for typing tests, you can select different dictionaries or word types.
+
+### Dictionary settings
+
+<WordSettings client:load />
+
+### Quote settings
+
+<QuoteSettings client:load />
+
 
 ## Theme Settings
 <ThemeSettings client:load />
