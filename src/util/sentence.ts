@@ -11,10 +11,19 @@ export const createSentenceFromWords = (
         return "";
     }
     let sentence = "";
-    for (let i = 0; i < maxWords; i++) {
+    let wordCount = 0;
+
+    while(wordCount < maxWords) {
         const randomIndex = Math.floor(Math.random() * fetchedWords.words.length);
         sentence += fetchedWords.words[randomIndex] + " ";
+        wordCount = sentence.trim().split(" ").length;
     }
+
+    if( wordCount > maxWords ) {
+        const wordsArray = sentence.trim().split(" ");
+        sentence = wordsArray.slice(0, maxWords).join(" ");
+    }
+
     return sentence.trim();
 };
 
