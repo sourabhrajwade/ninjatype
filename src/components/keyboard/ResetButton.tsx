@@ -4,12 +4,12 @@ import { RotateCcw } from "lucide-react";
 
 const ResetButton = () => {
     const handleReset = () => {
-        $config.set({...defaultConfig});
+        $config.set({...defaultConfig, ...$config.get(),});
     };
     
     return (
         <div id="reset-button">
-            <button className="btn" onClick={handleReset} title="Reset Configuration">
+            <button className="btn" onClick={handleReset} title="Reset Sentence">
                 <RotateCcw />
             </button>
         </div>

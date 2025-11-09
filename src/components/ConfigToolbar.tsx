@@ -16,7 +16,6 @@ const ConfigToolbar = () => {
     return (<div id="config-toolbar-container">
         <div id="config-toolbar">
             <ConfigMode config={config} />
-            <Divider />
             <ConfigModeSettings config={config} />
         </div>
     </div>);

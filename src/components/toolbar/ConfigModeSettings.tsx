@@ -14,8 +14,14 @@ const ConfigModeSettings = ({ config }: { config: ReturnType<typeof $config.get>
     const handleWordCountChange = (wordCount: string) => {
         $config.setKey("maxWordCount", wordCount);
     }
-    const times = ["2s","15s", "30s", "45s", "1m", "2m"];
+    const times = ["15s", "30s", "45s", "1m", "2m"];
     const wordCounts = ["10", "25", "50", "100", "150"];
+
+    if(import.meta.env.DEV) {
+        times.push("2s");
+        wordCounts.push("5");
+    }
+
     const activeValues = mode === "time" ? times : wordCounts;
     const activeValue = mode === "time" ? config?.countdownTime : config?.maxWordCount;
     const activeIndex = activeValues.indexOf(activeValue ?? (mode === "time" ? "15s" : "25"));
@@ -55,10 +61,10 @@ const ConfigModeSettings = ({ config }: { config: ReturnType<typeof $config.get>
             <Minus />
         </button>
         {times.map(time => (
-            <button key={time} className="btn config-setting-btn" data-visible={mode === "time"} data-enabled={activeValue === time} onClick={() => handleTimeChange(time)}>{time}</button>
+            <button key={time} className="btn config-setting-btn nunito-regular-400" data-visible={mode === "time"} data-enabled={activeValue === time} onClick={() => handleTimeChange(time)}>{time}</button>
         ))}
         {wordCounts.map(count => (
-            <button key={count} className="btn config-setting-btn" data-visible={mode === "words"} data-enabled={activeValue === count} onClick={() => handleWordCountChange(count)}>{count}</button>
+            <button key={count} className="btn config-setting-btn nunito-regular-400" data-visible={mode === "words"} data-enabled={activeValue === count} onClick={() => handleWordCountChange(count)}>{count}</button>
         ))}
         <button className="btn icon-btn" onClick={handlePlusClick} data-visible={activeIndex !== activeValues.length -1}>
             <Plus />

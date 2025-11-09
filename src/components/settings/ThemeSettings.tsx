@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const ThemeSettings = () => {
     const { theme: storedTheme } = useStore($config);
-    const [theme, setTheme] = useState<typeof storedTheme>("default");
+    const [theme, setTheme] = useState<typeof storedTheme| null>(null);
 
     useEffect(() => {
         setTheme(storedTheme);

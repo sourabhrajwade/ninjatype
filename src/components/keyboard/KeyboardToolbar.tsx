@@ -13,7 +13,7 @@ const KeyboardToolbar = () => {
     const mode = config?.mode || "time";
     return ( <div id="keyboard-toolbar">
         {mode === "time" && <CountdownToolbar />}
-        {mode === "words" && <WordcountToolbar />}
+        {(mode === "words" || mode === "quotes" ) && <WordcountToolbar />}
     </div> );
 }
  
