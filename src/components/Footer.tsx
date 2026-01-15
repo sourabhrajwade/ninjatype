@@ -25,20 +25,20 @@ const Footer = () => {
                     </span>
                 </div>
 
-                <div className="footer-center">
+                <div className="footer-center-links">
                     <a href="/about/" className="footer-link">
-                        <Shell /> About
+                        <Shell size={18} /> About
                     </a>
                     <a href="/contact/" className="footer-link">
-                        <Mailbox />
+                        <Mailbox size={18} />
                         Contact
                     </a>
                     <a href="/support/" className="footer-link">
-                        <LifeBuoy />
+                        <LifeBuoy size={18} />
                         Support
                     </a>
                     <a href="/contributors/" className="footer-link">
-                        <HeartHandshake />
+                        <HeartHandshake size={18} />
                         Contributors
                     </a>
                 </div>

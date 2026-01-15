@@ -835,20 +835,21 @@ body[data-kb-typing-state="1"][data-kb-state="2"] footer {
     color: var(--sub-alt-text-color);
 }
 
-.footer-center {
-    display: flex;
+.footer-center-links {
+    display: grid;
     align-items: center;
     gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.footer-center a {
+.footer-center-links a {
     color: var(--sub-text-color);
     text-decoration: none;
     font-size: 13px;
     transition: color 0.2s ease;
 }
 
-.footer-center a:hover {
+.footer-center-links a:hover {
     color: var(--main-color);
 }
 
@@ -965,6 +966,11 @@ body[data-kb-typing-state="1"][data-kb-state="2"] footer {
 }
 
 @media (max-width: 480px) {
+    .footer-center-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
     #config-toolbar-container {
         margin-top: 25px;
         padding: 0 5px;
